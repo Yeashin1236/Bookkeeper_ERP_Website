@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bookkeeper ERP - Accounting & Financial Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #fcf9f9;
+      background: #585c64;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: #1c2b4e;
+      color: whitesmoke;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color:whitesmoke;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #070808;
+    }
+
+    .hero {
+      background: #b7b9bb;
+      padding: 80px 0;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #333333;
+    }
+
+    .section {
+      padding: 60px 0;
+      background: #8c9097;
+      text-align: center;
+      color: #fcf9f9;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .feature {
+      background: #131f35;
+      color: #131212;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .feature img {
+      width: 200px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #7c7a7a;
+    }
+
+    .feature p {
+      color: #070707;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 40px 0;
+      box-sizing: border-box;
+      background: #1f2937;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #1a1919;
+      background-color: #2f4966;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .btn.secondary {
+      background-color: #93c5fd;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #000000;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    /* CONTACT SECTION STYLES */
+    #contact {
+      background-color: #494752;
+      color: #ffffff;
+    }
+
+    #contact h2 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    #contact p {
+      color: #d1d5db;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+
+    .contact-left,
+    .contact-right {
+      flex: 1 1 48%;
+    }
+
+    .contact-left form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #c7c7c7;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      background-color: #c4c2ca;
+      color: #070606;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #070707;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-left button {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-left button:hover {
+      background-color: #e5e5e5;
+    }
+
+    .contact-card {
+      margin-bottom: 20px;
+    }
+
+    .contact-card h3 {
+      color: #3a3838;
+      margin-bottom: 5px;
+    }
+
+    .contact-card a,
+    .contact-card p {
+      color: #e0e0e0;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .social-icons a {
+      font-size: 20px;
+      margin-right: 15px;
+      color: #e0e0e0;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+      }
+
+      .contact-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Bookkeeper ERP</h1>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
+        <a href="#learn">Learn</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="Bookkeeper1.png" alt="ERP Illustration">
+        </div>
+        <div class="hero-text">
+          <h2>Smart ERP for Businesses</h2>
+          <p>Accounting & Financial Management tailored for SMEs and Enterprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <h2>Bookkeeper Features</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="loacalization.png" alt="Localization">
+          <h3>Localized Compliance</h3>
+          <p>100% compliant with Russian GAAP and tax regulations.</p>
+        </div>
+        <div class="feature">
+          <img src="ux.png" alt="UX">
+          <h3>User-Friendly Design</h3>
+          <p>Intuitive UI designed to reduce onboarding time and increase productivity.</p>
+        </div>
+        <div class="feature">
+          <img src="mobile.png" alt="Mobile">
+          <h3>Cloud & Mobile Ready</h3>
+          <p>Access from anywhere via web or mobile with secure hosting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="modules">
+    <div class="container">
+      <h2>Core Modules</h2>
+      <div class="features">
+        <div class="feature"><img src="accounting.png" alt="Accounting"><h3>Accounting</h3><p>GL, AP/AR, double-entry, tax automation</p></div>
+        <div class="feature"><img src="payroll.png" alt="Payroll"><h3>Payroll</h3><p>Generate payslips, deductions, and tax reports</p></div>
+        <div class="feature"><img src="budgeting.png" alt="Budgeting"><h3>Budgeting</h3><p>Financial forecasting and planning tools</p></div>
+        <div class="feature"><img src="asset.png" alt="Asset Management"><h3>Asset Management</h3><p>Track depreciation, valuation, and location</p></div>
+        <div class="feature"><img src="bank.png" alt="Bank"><h3>Bank Connections</h3><p>Match and reconcile bank transactions in bulk</p></div>
+        <div class="feature"><img src="currency.png" alt="Currency"><h3>Multi-currency Support</h3><p>Get real-time exchange rates, simplified payments</p></div>
+        <div class="feature"><img src="inventory.png" alt="Inventory"><h3>Inventory</h3><p>Manage stock, vendors, and purchase orders</p></div>
+        <div class="feature"><img src="crm.png" alt="CRM"><h3>CRM Integration</h3><p>Customer records, invoicing, and communication</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visualization" id="learn">
+    <div class="container">
+      <h2>Learn About Bookkeeper ERP</h2>
+      <p>Watch how Bookkeeper helps Businesses manage accounting and finance.</p>
+      <div class="video-container">
+        <iframe src="ERP Accounting.mp4" title="Bookkeeper ERP Overview" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <p>Flexible and transparent pricing for every stage of your business.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>Basic</h3>
+          <h4>₽1,500 / month</h4>
+          <p>✔ Core Accounting Module</p>
+          <p>✔ Payroll & Reports</p>
+          <p>✔ Email Support</p>
+          <p>✖ No CRM or Mobile Access</p>
+          
+        </div>
+        <div class="feature" style="border: 2px solid #000000;">
+          <h3>Professional</h3>
+          <h4>₽4,900 / month</h4>
+          <p>✔ All Basic Features</p>
+          <p>✔ CRM & Inventory Modules</p>
+          <p>✔ Priority Support</p>
+          <p>✔ Mobile App Access</p>
+          
+        </div>
+        <div class="feature">
+          <h3>Enterprise</h3>
+          <h4>₽9,900 / month</h4>
+          <p>✔ All Modules Included</p>
+          <p>✔ Custom Bank Integrations</p>
+          <p>✔ Dedicated Account Manager</p>
+          <p>✔ On-Premise or Cloud Hosting</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <p>Contact us to learn more about Bookkeeper ERP products, exclusive offers, and detailed information tailored to your needs.</p>
+
+      <div class="contact-section">
+
+        <!-- Left Column: Contact Form -->
+        <div class="contact-left">
+          <form>
+            <div class="form-row">
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+            </div>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Right Column: Contact Info -->
+        <div class="contact-right">
+          <div class="contact-card">
+            <h3>Address</h3>
+            <p>Tsimlyanskaya Street, 5<br>Lyublino, Moscow<br>Russia</p>
+          </div>
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:mdarafat.uiu@gmail.com">mdarafat.uiu@gmail.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>Phone</h3>
+            <p>+7 993 606 7157</p>
+          </div>
+          <div class="contact-card">
+            <h3>Social</h3>
+            <div class="social-icons">
+              <a href="https://wa.me/8801701069883" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://t.me/Yeashin1236" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bookkeeper ERP. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
